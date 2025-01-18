@@ -35,6 +35,12 @@ return [
 
     'connections' => [
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGO_DB_URI', 'mongodb://localhost:27017'),
+            'database' => env('MONGO_DB_DATABASE', 'ryde'),
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
