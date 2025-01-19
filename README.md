@@ -72,8 +72,7 @@ This will start the server at http://127.0.0.1:8000.
 
 7. Access the Swagger API Documentation
 You can access the Swagger API documentation via the following URL:
-
-Swagger API Documentation
+http://127.0.0.1:8000/api/documentation
 
 8. Testing the API
 You can test the API using tools like Postman or cURL to make requests to the following endpoints:
@@ -90,6 +89,3 @@ GET /api/users/{username}/nearby-friends - Get nearby friends based on coordinat
 Run the unit tests to ensure everything is working as expected:
 php artisan test
 
-API Documentation
-The API documentation is available through Swagger UI. Here is the link to the documentation:
-http://127.0.0.1:8000/api/documentation
