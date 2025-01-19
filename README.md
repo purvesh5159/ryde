@@ -37,34 +37,11 @@ Before running this project, make sure you have the following installed:
 
 Clone the repository to your local machine:
 
-```bash
 git clone https://github.com/purvesh5159/ryde.git
+
 cd ryde
 2. Install Dependencies
-Run the following command to install the project dependencies:
 
-bash
-Copy
-Edit
-composer install
-If you're using npm for frontend development (for example, to generate Swagger UI documentation), you may also need to install Node.js dependencies:
-
-bash
-Copy
-Edit
-npm install
-3. Configure Environment Variables
-Copy the .env.example file to .env:
-
-bash
-Copy
-Edit
-cp .env.example .env
-Edit the .env file and configure the database connection to MongoDB:
-
-bash
-Copy
-Edit
 DB_CONNECTION=mongodb
 DB_HOST=127.0.0.1
 DB_PORT=27017
@@ -74,44 +51,24 @@ Set up any other environment variables as needed (for example, mail configuratio
 4. Generate Application Key
 Generate the application key for encryption:
 
-bash
-Copy
-Edit
-php artisan key:generate
 5. Run Migrations
 Since we're using MongoDB, you don’t need traditional SQL migrations, but make sure the collections are properly set up by running the migrations:
-
-bash
-Copy
-Edit
 php artisan migrate
+
 6. Generate Swagger Documentation
 If you haven't installed Swagger-Lume yet, follow these steps:
 
 Install Swagger-Lume:
-
-bash
-Copy
-Edit
 composer require "darkaonline/swagger-lume"
 Publish the Swagger configuration file:
 
-bash
-Copy
-Edit
 php artisan vendor:publish --provider="SwaggerLume\ServiceProvider"
 Generate the Swagger documentation:
 
-bash
-Copy
-Edit
 php artisan swagger-lume:generate
 7. Start the Development Server
 Run the application locally using the following command:
 
-bash
-Copy
-Edit
 php artisan serve
 This will start the server at http://127.0.0.1:8000.
 
@@ -130,19 +87,11 @@ GET /api/users - List all users
 POST /api/users/{id}/add-friend - Add a friend
 POST /api/users/{id}/remove-friend - Remove a friend
 GET /api/users/{username}/nearby-friends - Get nearby friends based on coordinates
+
 10. Unit Testing
 Run the unit tests to ensure everything is working as expected:
-
-bash
-Copy
-Edit
 php artisan test
+
 API Documentation
 The API documentation is available through Swagger UI. Here is the link to the documentation:
-
-API Documentation
-
-GitHub Repository
-For more details and to contribute, check out the GitHub repository:
-
-GitHub Repository - Ryde
+http://127.0.0.1:8000/api/documentation
